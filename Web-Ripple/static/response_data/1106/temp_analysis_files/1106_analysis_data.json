@@ -1,0 +1,90 @@
+{
+    "frames": {
+        "20250502_151557_097978": {
+            "timestamp": "20250502_151557_097978",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1106\\temp_analysis_files\\1106_camera_frames\\frame_20250502_151557_097978.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    902,
+                    555
+                ],
+                "right": [
+                    977,
+                    555
+                ],
+                "percentage": 35,
+                "glass_characteristics": "Transparent disposable plastic cup, cylindrical, medium size",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                902,
+                555
+            ],
+            "right_point": [
+                977,
+                555
+            ],
+            "glass_characteristics": "Transparent disposable plastic cup, cylindrical, medium size",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_151559_270468": {
+            "timestamp": "20250502_151559_270468",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1106\\temp_analysis_files\\1106_camera_frames\\frame_20250502_151559_270468.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_151601_094995": {
+            "timestamp": "20250502_151601_094995",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1106\\temp_analysis_files\\1106_camera_frames\\frame_20250502_151601_094995.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    651,
+                    453
+                ],
+                "right": [
+                    682,
+                    455
+                ],
+                "percentage": 0,
+                "glass_characteristics": "clear plastic cup, standard size, cylindrical, empty",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 0,
+            "left_point": [
+                651,
+                453
+            ],
+            "right_point": [
+                682,
+                455
+            ],
+            "glass_characteristics": "clear plastic cup, standard size, cylindrical, empty",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_151603_267020": {
+            "timestamp": "20250502_151603_267020",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1106\\temp_analysis_files\\1106_camera_frames\\frame_20250502_151603_267020.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        }
+    }
+}

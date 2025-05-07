@@ -1,0 +1,301 @@
+{# templates/dashboard.html #}
+{% extends "base.html" %}
+{% block title %}{{ user.name }}'s Dashboard{% endblock %}
+
+{# -------------------------  CSS  ------------------------- #}
+{% block extra_css %}
+<style>
+/* --- top toggle --------------------------------------------------- */
+.view-toggle{margin-bottom:2rem;display:flex;justify-content:flex-end;}
+.view-toggle .btn-group{background:#fff;padding:4px;border-radius:50px;
+                        box-shadow:0 2px 4px rgba(0,0,0,.1);}
+.view-toggle .btn{min-width:140px;font-size:1rem;padding:.5rem 1.5rem;
+                  border-radius:50px;}
+.view-toggle .btn-primary{background:#0d6efd;border-color:#0d6efd;}
+.view-toggle .btn-outline-primary{color:#0d6efd;border-color:#0d6efd;}
+
+/* --- generic cards ------------------------------------------------ */
+.dashboard-card {
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-card .card-title {
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+}
+.dashboard-card .chart-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#waterSourcesChart {
+    height: 180px !important;
+    margin: auto;
+}
+.card-title{font-size:1.1rem;font-weight:500;margin-bottom:.75rem;}
+
+/* --- user card ---------------------------------------------------- */
+.user-card{border-radius:24px;position:relative;overflow:hidden;
+           min-height:400px;background:#1a1a1a;}
+.user-card-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.user-card-overlay{position:absolute;inset-inline:0;bottom:0;padding:1.4rem;
+                   background:rgba(255,255,255,.2);backdrop-filter:blur(8px);}
+.user-name{margin:0;color:#fff;font-size:1.75rem;font-weight:600;
+           text-shadow:0 2px 4px rgba(0,0,0,.2);}
+.user-id{color:rgba(255,255,255,.9);font-size:1rem;margin-top:.25rem;}
+.user-stat{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.2);
+           padding:.5rem 1rem;border-radius:50px;font-weight:500;color:#fff;}
+
+/* --- timer -------------------------------------------------------- */
+.timer-circle{position:relative;width:240px;height:240px;margin:0 auto;margin-top:1rem;}
+.timer-svg{width:100%;height:100%;}
+.timer-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+             text-align:center;}
+.timer-time{font-size:42px;font-weight:400;margin:0;}
+.timer-label{font-size:14px;color:#6c757d;margin-top:4px;}
+
+/* --- KPI cards & buttons --------------------------------------- */
+.dashboard-card.kpi-card {
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+.kpi-card .card-title {
+    flex: 0 0 auto;
+}
+.kpi-card .chart-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.ripple-only{display:none;margin-top:1rem;}  /* hidden until Ripple View */
+.ripple-view-btn{padding:.4rem 1.25rem;font-size:.9rem;}
+
+/* --- suggestions list --------------------------------------------- */
+.suggestions-card{background:#fff;border:1px solid #dee2e6;border-radius:8px;
+                  padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1);}
+.suggestions-header{display:flex;justify-content:space-between;align-items:center;
+                    margin-bottom:1.5rem;}
+.suggestion-item{display:flex;align-items:center;padding:1rem;border-radius:8px;
+                 background:#f8f9fa;margin-bottom:.75rem;border:1px solid #dee2e6;}
+.suggestion-item:hover{background:#e9ecef;}
+.suggestion-item.completed{opacity:.7;}
+.suggestion-icon{width:40px;height:40px;background:#fff;border-radius:12px;
+                 display:flex;align-items:center;justify-content:center;margin-right:1rem;
+                 box-shadow:0 2px 4px rgba(0,0,0,.05);}
+.suggestion-content{flex:1;}
+</style>
+{% endblock %}
+
+{# -------------------------  BODY  ------------------------- #}
+{% block content %}
+<div class="container">
+
+  <!-- --- view toggle --------------------------------------------- -->
+  <div class="view-toggle">
+    <div class="btn-group" role="group">
+      <button class="btn btn-primary"          data-view="caregiver">Caregiver View</button>
+      <button class="btn btn-outline-primary"  data-view="ripple">Ripple View</button>
+    </div>
+  </div>
+
+  <!-- --- grid ----------------------------------------------------- -->
+  <div class="row g-4">
+    <!-- user card -->
+    <div class="col-md-4">
+      <div class="user-card">
+        <img src="{{ url_for('static', filename=user.image) }}" alt="{{ user.name }}" class="user-card-image">
+        <div class="user-stat">{{ user.water_consumed }} ml</div>
+        <div class="user-card-overlay">
+          <h3 class="user-name">{{ user.name }}</h3>
+          <div class="user-id mb-3">ID: {{ user.ripple_id }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- water source bar chart -->
+    <div class="col-md-4">
+      <div class="dashboard-card">
+        <h5 class="card-title d-flex justify-content-between">
+          Water Sources <small class="text-muted">Today</small>
+        </h5>
+        <div class="chart-container"><canvas id="waterSourcesChart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- recording duration / timer -->
+    <div class="col-md-4">
+      <div class="dashboard-card text-center">
+        <h5 class="card-title d-flex justify-content-between">
+          Recording Duration <small class="text-muted">Today</small>
+        </h5>
+
+        <div class="timer-circle">
+          <svg viewBox="0 0 120 120" class="timer-svg">
+            <circle cx="60" cy="60" r="54" stroke="#f1f1f1" stroke-width="12" fill="none"/>
+            <g stroke="#000" stroke-width="2">
+              {% for i in range(60) %}
+                <line x1="60" y1="4" x2="60" y2="10"
+                      transform="rotate({{ i*6 }} 60 60)" />
+              {% endfor %}
+            </g>
+            <circle id="arc" cx="60" cy="60" r="54"
+                    stroke="#F2C94C" stroke-width="12" fill="none"
+                    stroke-linecap="round"
+                    stroke-dasharray="0 339"
+                    transform="rotate(-90 60 60)"/>
+          </svg>
+          <div class="timer-inner">
+            <p class="timer-time" id="timerTime">{{(recording_duration)}}</p>
+            <span class="timer-label">Work Time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI row ---------------------------------------------------- -->
+    <div class="col-12">
+      <div class="row g-4">
+
+        <!-- Water Consumption -->
+        <div class="col-md-4">
+          <div class="dashboard-card kpi-card">
+            <h5 class="card-title d-flex justify-content-between">
+              Water Consumption <small class="text-muted">Today</small>
+            </h5>
+            <div class="chart-container d-flex align-items-center justify-content-center">
+              <h2 class="display-4 mb-0">{{ water_ml }}&nbsp;ml</h2>
+            </div>
+            <!-- ripple-only action -->
+            <div class="ripple-only text-center">
+                <a href="{{ url_for('glass_video_page', ripple_id=user.ripple_id) }}" class="btn btn-outline-primary ripple-view-btn mt-2" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-cup-straw me-1"></i> See Glass Detection
+                  </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water through Food -->
+        <div class="col-md-4">
+          <div class="dashboard-card kpi-card">
+            <h5 class="card-title d-flex justify-content-between">
+              Water through Food <small class="text-muted">Today</small>
+            </h5>
+            <div class="chart-container d-flex align-items-center justify-content-center">
+              <h2 class="display-4 mb-0">{{ food_ml }}&nbsp;ml</h2>
+            </div>
+            <div class="ripple-only text-center">
+              <a href="{{ url_for('food_video_page', ripple_id=user.ripple_id) }}" class="btn btn-outline-primary ripple-view-btn" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-egg-fried me-1"></i> See Food Detection
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water through Face -->
+        <div class="col-md-4">
+          <div class="dashboard-card kpi-card">
+            <h5 class="card-title d-flex justify-content-between">
+              Hydration Detection (Face) <small class="text-muted">Today</small>
+            </h5>
+            <div class="chart-container d-flex align-items-center justify-content-center">
+              <h2 class="display-4 mb-0">{{ hydration_status|title }}</h2>
+            </div>
+            <div class="ripple-only text-center">
+              <a href="{{ url_for('face_video_page', ripple_id=user.ripple_id) }}" class="btn btn-outline-primary ripple-view-btn" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-person-video2 me-1"></i> See Face Detection
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- suggestions ------------------------------------------------- -->
+    <div class="col-md-8 offset-md-4">
+      <div class="suggestions-card">
+        <div class="suggestions-header">
+          <h5>Ripple's suggestions</h5>
+          <div class="suggestions-count">{{ suggestions|length }} suggestions</div>
+        </div>
+        {% for suggestion in suggestions %}
+          <div class="suggestion-item {% if suggestion.completed %}completed{% endif %}">
+            <div class="suggestion-icon">{{ suggestion.icon }}</div>
+            <div class="suggestion-content">
+              <div class="suggestion-text">
+                <strong>{{ suggestion.title }}</strong>
+                <p class="mb-0 text-muted">{{ suggestion.description }}</p>
+              </div>
+              <div class="suggestion-time">
+                <span class="badge {% if suggestion.priority=='high' %}bg-danger{% else %}bg-secondary{% endif %} me-2">
+                  {{ suggestion.priority }}
+                </span>
+                {{ suggestion.time }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
+{% endblock %}
+
+{# -------------------------  JS  ------------------------- #}
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+/* --- bar chart ---------------------------------------------- */
+// Get water sources data from the server
+const waterSources = JSON.parse('{{ water_sources|tojson }}');
+new Chart(document.getElementById('waterSourcesChart'), {
+  type:'bar',
+  data:{labels:Object.keys(waterSources),
+        datasets:[{label:'ML Consumed',
+                   data:Object.values(waterSources),
+                   backgroundColor:['#0d6efd','#20c997','#adb5bd','#adb5bd','#adb5bd']}]},
+  options:{responsive:true,maintainAspectRatio:false,
+           plugins:{legend:{display:false}}}
+});
+
+/* --- top tab behaviour --------------------------------------- */
+const tabs = document.querySelectorAll('.view-toggle .btn');
+const rippleBlocks = document.querySelectorAll('.ripple-only');
+
+tabs.forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    /* 1. normalise all tabs */
+    tabs.forEach(t=>{
+      t.classList.remove('btn-primary','active');
+      t.classList.add('btn-outline-primary');
+    });
+
+    /* 2. activate clicked tab */
+    tab.classList.remove('btn-outline-primary');
+    tab.classList.add('btn-primary','active');
+
+    /* 3. show/hide Ripple-only UI */
+    const isRipple = tab.dataset.view === 'ripple';
+    rippleBlocks.forEach(b=>{ b.style.display = isRipple ? 'block' : 'none'; });
+  });
+});
+
+/* --- static timer arc --------------------------------------- */
+(()=>{
+  const circle = document.getElementById('arc');
+  const R = 54, C = 2*Math.PI*R;
+  const progress = 0.40;               // 40 % filled
+  circle.style.strokeDasharray = `${progress*C} ${C}`;
+})();
+</script>
+{% endblock %}

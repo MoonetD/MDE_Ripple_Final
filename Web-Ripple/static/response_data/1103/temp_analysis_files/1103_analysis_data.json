@@ -1,0 +1,115 @@
+{
+    "frames": {
+        "20250502_143604_769452": {
+            "timestamp": "20250502_143604_769452",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1103\\temp_analysis_files\\1103_camera_frames\\frame_20250502_143604_769452.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_143608_949348": {
+            "timestamp": "20250502_143608_949348",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1103\\temp_analysis_files\\1103_camera_frames\\frame_20250502_143608_949348.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    361,
+                    404
+                ],
+                "right": [
+                    397,
+                    402
+                ],
+                "percentage": 26,
+                "glass_characteristics": "Clear plastic cup, small, with minimal water inside; cylindrical, disposable type.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 26,
+            "left_point": [
+                361,
+                404
+            ],
+            "right_point": [
+                397,
+                402
+            ],
+            "glass_characteristics": "Clear plastic cup, small, with minimal water inside; cylindrical, disposable type.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143611_238611": {
+            "timestamp": "20250502_143611_238611",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1103\\temp_analysis_files\\1103_camera_frames\\frame_20250502_143611_238611.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    101,
+                    391
+                ],
+                "right": [
+                    126,
+                    388
+                ],
+                "percentage": 50,
+                "glass_characteristics": "Clear plastic disposable cup, medium size, cylindrical, partially filled with clear liquid.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 50,
+            "left_point": [
+                101,
+                391
+            ],
+            "right_point": [
+                126,
+                388
+            ],
+            "glass_characteristics": "Clear plastic disposable cup, medium size, cylindrical, partially filled with clear liquid.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143613_345825": {
+            "timestamp": "20250502_143613_345825",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1103\\temp_analysis_files\\1103_camera_frames\\frame_20250502_143613_345825.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    311,
+                    283
+                ],
+                "right": [
+                    332,
+                    282
+                ],
+                "percentage": 30,
+                "glass_characteristics": "transparent plastic cup, typical disposable type, small size, cylindrical shape, contains clear liquid (probably water)",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 30,
+            "left_point": [
+                311,
+                283
+            ],
+            "right_point": [
+                332,
+                282
+            ],
+            "glass_characteristics": "transparent plastic cup, typical disposable type, small size, cylindrical shape, contains clear liquid (probably water)",
+            "appears_different": false,
+            "drinking_event": false
+        }
+    }
+}

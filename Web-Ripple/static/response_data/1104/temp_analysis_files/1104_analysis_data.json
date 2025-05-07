@@ -1,0 +1,65 @@
+{
+    "frames": {
+        "20250502_145439_474027": {
+            "timestamp": "20250502_145439_474027",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1104\\temp_analysis_files\\1104_camera_frames\\frame_20250502_145439_474027.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    170,
+                    288
+                ],
+                "right": [
+                    262,
+                    283
+                ],
+                "percentage": 60,
+                "glass_characteristics": "translucent plastic cup, cylindrical, medium size, clear water, right-handed grip",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 60,
+            "left_point": [
+                170,
+                288
+            ],
+            "right_point": [
+                262,
+                283
+            ],
+            "glass_characteristics": "translucent plastic cup, cylindrical, medium size, clear water, right-handed grip",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_145443_540350": {
+            "timestamp": "20250502_145443_540350",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1104\\temp_analysis_files\\1104_camera_frames\\frame_20250502_145443_540350.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_145445_714143": {
+            "timestamp": "20250502_145445_714143",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1104\\temp_analysis_files\\1104_camera_frames\\frame_20250502_145445_714143.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_145447_642553": {
+            "timestamp": "20250502_145447_642553",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1104\\temp_analysis_files\\1104_camera_frames\\frame_20250502_145447_642553.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        }
+    }
+}

@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}Water Ripple - User Video{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        <!-- Video Card -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">Ripple View - 
+                        {% if video_type == 'face' %}
+                            Face Detection
+                        {% elif video_type == 'food' %}
+                            Food Detection
+                        {% else %}
+                            Glass Detection
+                        {% endif %}
+                    </h4>
+                    <a href="{{ url_for('user_details', ripple_id=ripple_id) }}" class="btn btn-outline-primary btn-sm">Back to Details</a>
+                </div>
+                <div class="card-body">
+                    {% if video_exists %}
+                    <div class="ratio ratio-16x9 mb-3">
+                        <video controls autoplay muted class="rounded" id="videoPlayer">
+                            {% if video_type == 'face' %}
+                                <source src="{{ url_for('static', filename='video_resp/video_' + ripple_id|string + '_water_face.webm') }}" type="video/webm">
+                            {% elif video_type == 'food' %}
+                                <source src="{{ url_for('static', filename='video_resp/video_' + ripple_id|string + '_water_food.webm') }}" type="video/webm">
+                            {% else %}
+                                <source src="{{ url_for('static', filename='video_resp/video_' + ripple_id|string + '_water_' + video_type + '.webm') }}" type="video/webm">
+                            {% endif %}
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    {% else %}
+                    <img src="{{ url_for('static', filename='images/graph_data/' + ripple_id|string + '_blue_face.jpg') }}" type="image/jpeg">
+                    {% endif %}
+                    <div class="mt-3 d-flex gap-2">
+                        <button id="analyzeBtn" class="btn btn-primary" onclick="analyzeVideo()">Analyze Video</button>
+                        <button id="consumptionBtn" class="btn btn-success" onclick="analyzeConsumption()">Analyze Consumption</button>
+                        <button id="suggestionsBtn" class="btn btn-info text-white" onclick="generateSuggestions()">Generate Suggestions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph Card -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header">
+                    <h4 class="mb-0">Water Consumption Graph</h4>
+                </div>
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <img src="{{ url_for('static', filename='images/graph_data/video_' + ripple_id|string + '_water_consumption_graph_' + video_type + '.png') }}" 
+                         class="img-fluid rounded" 
+                         alt="Water Consumption Graph - {{ video_type|title }}"
+                         style="max-height: 400px; width: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function analyzeVideo() {
+    const btn = document.getElementById('analyzeBtn');
+    btn.disabled = true;
+    btn.innerHTML = 'Analyzing...';
+
+    fetch(`/analyze/{{ ripple_id }}/{{ video_type }}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.warn('Analysis warning:', data.error);
+            }
+            // Consider it successful even with warnings
+            alert(data.message + (data.frames_analyzed ? ` (${data.frames_analyzed} frames analyzed)` : ''));
+            location.reload(); // Reload to show new graph
+        })
+        .catch(error => {
+            console.error('Analysis error:', error);
+            alert('Analysis completed but there might have been some issues.');
+            location.reload(); // Reload anyway as the analysis might have worked
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerHTML = 'Analyze Video';
+        });
+}
+
+function analyzeConsumption() {
+    const btn = document.getElementById('consumptionBtn');
+    btn.disabled = true;
+    btn.innerHTML = 'Analyzing...';
+
+    fetch(`/analyze_consumption/{{ ripple_id }}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                Swal.fire('Error', data.error, 'error');
+            } else {
+                Swal.fire('Success', 'Consumption analysis complete!', 'success');
+                location.reload(); // Reload to show new graph
+            }
+        })
+        .catch(error => {
+            Swal.fire('Error', error.toString(), 'error');
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerHTML = 'Analyze Consumption';
+        });
+}
+
+function generateSuggestions() {
+    const btn = document.getElementById('suggestionsBtn');
+    btn.disabled = true;
+    btn.innerHTML = 'Generating...';
+
+    fetch(`/generate_suggestions/{{ ripple_id }}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                Swal.fire('Error', data.error, 'error');
+            } else {
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Suggestions generated successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'View Suggestions'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = `/user/${ripple_id}/suggestions`;
+                    }
+                });
+            }
+        })
+        .catch(error => {
+            Swal.fire('Error', error.toString(), 'error');
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerHTML = 'Generate Suggestions';
+        });
+}
+</script>
+{% endblock %}

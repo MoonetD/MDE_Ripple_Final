@@ -1,0 +1,13 @@
+{
+  "suggestions": [
+    {
+      "id_user": 1002,
+      "icon": "\ud83d\udca7",
+      "title": "Offer a full glass of water now",
+      "description": "User 1002: It's 2:48 PM, and the elderly person has only consumed about 120ml of water (60% of one glass) today, with no water intake from food. For their age (77+), this puts them at increased risk of dehydration. Please immediately provide them with a full glass of water (200ml) and directly encourage them to drink it slowly. Stay with them during intake to ensure safety and adequate hydration.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    }
+  ]
+}

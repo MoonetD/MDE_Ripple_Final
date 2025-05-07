@@ -1,0 +1,581 @@
+{
+    "frames": {
+        "20250502_142924_568237": {
+            "timestamp": "20250502_142924_568237",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142924_568237.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_142926_798677": {
+            "timestamp": "20250502_142926_798677",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142926_798677.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    108,
+                    425
+                ],
+                "right": [
+                    186,
+                    419
+                ],
+                "percentage": 95,
+                "glass_characteristics": "clear cylindrical glass, medium size, appears nearly full of water",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 95,
+            "left_point": [
+                108,
+                425
+            ],
+            "right_point": [
+                186,
+                419
+            ],
+            "glass_characteristics": "clear cylindrical glass, medium size, appears nearly full of water",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142929_037146": {
+            "timestamp": "20250502_142929_037146",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142929_037146.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    93,
+                    511
+                ],
+                "right": [
+                    180,
+                    520
+                ],
+                "percentage": 47,
+                "glass_characteristics": "Clear plastic cup, slightly tapered, cylindrical, filled approximately half with clear water.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 47,
+            "left_point": [
+                93,
+                511
+            ],
+            "right_point": [
+                180,
+                520
+            ],
+            "glass_characteristics": "Clear plastic cup, slightly tapered, cylindrical, filled approximately half with clear water.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142933_341555": {
+            "timestamp": "20250502_142933_341555",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142933_341555.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    713,
+                    338
+                ],
+                "right": [
+                    806,
+                    336
+                ],
+                "percentage": 60,
+                "glass_characteristics": "Transparent plastic cup, cylindrical, medium size, contains clear water",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 60,
+            "left_point": [
+                713,
+                338
+            ],
+            "right_point": [
+                806,
+                336
+            ],
+            "glass_characteristics": "Transparent plastic cup, cylindrical, medium size, contains clear water",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142935_471731": {
+            "timestamp": "20250502_142935_471731",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142935_471731.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    586,
+                    581
+                ],
+                "right": [
+                    682,
+                    579
+                ],
+                "percentage": 45,
+                "glass_characteristics": "Clear plastic cup, medium size, cylindrical, filled with clear liquid (likely water), no markings.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 45,
+            "left_point": [
+                586,
+                581
+            ],
+            "right_point": [
+                682,
+                579
+            ],
+            "glass_characteristics": "Clear plastic cup, medium size, cylindrical, filled with clear liquid (likely water), no markings.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142937_749211": {
+            "timestamp": "20250502_142937_749211",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142937_749211.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    751,
+                    523
+                ],
+                "right": [
+                    898,
+                    524
+                ],
+                "percentage": 40,
+                "glass_characteristics": "Clear plastic cup, cylindrical, medium size, holding clear liquid (likely water)",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 40,
+            "left_point": [
+                751,
+                523
+            ],
+            "right_point": [
+                898,
+                524
+            ],
+            "glass_characteristics": "Clear plastic cup, cylindrical, medium size, holding clear liquid (likely water)",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142942_212031": {
+            "timestamp": "20250502_142942_212031",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142942_212031.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_142944_833727": {
+            "timestamp": "20250502_142944_833727",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142944_833727.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    238,
+                    215
+                ],
+                "right": [
+                    316,
+                    219
+                ],
+                "percentage": 65,
+                "glass_characteristics": "clear plastic disposable cup, medium size, circular, slightly ridged sides, partially filled with water",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 65,
+            "left_point": [
+                238,
+                215
+            ],
+            "right_point": [
+                316,
+                219
+            ],
+            "glass_characteristics": "clear plastic disposable cup, medium size, circular, slightly ridged sides, partially filled with water",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142947_522215": {
+            "timestamp": "20250502_142947_522215",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142947_522215.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_142950_177048": {
+            "timestamp": "20250502_142950_177048",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142950_177048.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    104,
+                    369
+                ],
+                "right": [
+                    172,
+                    384
+                ],
+                "percentage": 35,
+                "glass_characteristics": "Clear plastic cup, moderate height, cylindrical, about a third full of water.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                104,
+                369
+            ],
+            "right_point": [
+                172,
+                384
+            ],
+            "glass_characteristics": "Clear plastic cup, moderate height, cylindrical, about a third full of water.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142952_515529": {
+            "timestamp": "20250502_142952_515529",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142952_515529.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    325,
+                    528
+                ],
+                "right": [
+                    397,
+                    529
+                ],
+                "percentage": 15,
+                "glass_characteristics": "short, clear plastic cup, subtle horizontal ridges, cylindrical, low water level",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 15,
+            "left_point": [
+                325,
+                528
+            ],
+            "right_point": [
+                397,
+                529
+            ],
+            "glass_characteristics": "short, clear plastic cup, subtle horizontal ridges, cylindrical, low water level",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142954_896065": {
+            "timestamp": "20250502_142954_896065",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142954_896065.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    225,
+                    773
+                ],
+                "right": [
+                    336,
+                    779
+                ],
+                "percentage": 22,
+                "glass_characteristics": "Clear plastic cup, wide mouth, short, transparent, visible ridges, contains clear liquid.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 22,
+            "left_point": [
+                225,
+                773
+            ],
+            "right_point": [
+                336,
+                779
+            ],
+            "glass_characteristics": "Clear plastic cup, wide mouth, short, transparent, visible ridges, contains clear liquid.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142957_423946": {
+            "timestamp": "20250502_142957_423946",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142957_423946.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    87,
+                    418
+                ],
+                "right": [
+                    146,
+                    423
+                ],
+                "percentage": 35,
+                "glass_characteristics": "Clear plastic tumbler, cylindrical, transparent, medium height, partially filled with water.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                87,
+                418
+            ],
+            "right_point": [
+                146,
+                423
+            ],
+            "glass_characteristics": "Clear plastic tumbler, cylindrical, transparent, medium height, partially filled with water.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_142959_975613": {
+            "timestamp": "20250502_142959_975613",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_142959_975613.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    106,
+                    237
+                ],
+                "right": [
+                    168,
+                    241
+                ],
+                "percentage": 35,
+                "glass_characteristics": "Clear, cylindrical plastic cup with faint horizontal ridges, medium height and diameter.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                106,
+                237
+            ],
+            "right_point": [
+                168,
+                241
+            ],
+            "glass_characteristics": "Clear, cylindrical plastic cup with faint horizontal ridges, medium height and diameter.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143002_444017": {
+            "timestamp": "20250502_143002_444017",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143002_444017.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    97,
+                    206
+                ],
+                "right": [
+                    132,
+                    208
+                ],
+                "percentage": 45,
+                "glass_characteristics": "Clear plastic cup, short, cylindrical, visible horizontal ridges",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 45,
+            "left_point": [
+                97,
+                206
+            ],
+            "right_point": [
+                132,
+                208
+            ],
+            "glass_characteristics": "Clear plastic cup, short, cylindrical, visible horizontal ridges",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143004_815597": {
+            "timestamp": "20250502_143004_815597",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143004_815597.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    964,
+                    761
+                ],
+                "right": [
+                    1158,
+                    780
+                ],
+                "percentage": 0,
+                "glass_characteristics": "clear, plastic, cylindrical, short, wide opening",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 0,
+            "left_point": [
+                964,
+                761
+            ],
+            "right_point": [
+                1158,
+                780
+            ],
+            "glass_characteristics": "clear, plastic, cylindrical, short, wide opening",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143007_217694": {
+            "timestamp": "20250502_143007_217694",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143007_217694.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": false,
+                "left": null,
+                "right": null,
+                "percentage": -1,
+                "glass_characteristics": "unknown; no glass visible in this frame",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": false,
+            "water_percentage": -1,
+            "left_point": null,
+            "right_point": null,
+            "glass_characteristics": "unknown; no glass visible in this frame",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143009_739545": {
+            "timestamp": "20250502_143009_739545",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143009_739545.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    1077,
+                    981
+                ],
+                "right": [
+                    1174,
+                    983
+                ],
+                "percentage": 20,
+                "glass_characteristics": "Clear plastic cup, cylindrical, medium size, partially filled with water.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 20,
+            "left_point": [
+                1077,
+                981
+            ],
+            "right_point": [
+                1174,
+                983
+            ],
+            "glass_characteristics": "Clear plastic cup, cylindrical, medium size, partially filled with water.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143012_064710": {
+            "timestamp": "20250502_143012_064710",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143012_064710.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    794,
+                    591
+                ],
+                "right": [
+                    869,
+                    599
+                ],
+                "percentage": 25,
+                "glass_characteristics": "clear plastic tumbler, medium height, cylindrical, transparent, no markings",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 25,
+            "left_point": [
+                794,
+                591
+            ],
+            "right_point": [
+                869,
+                599
+            ],
+            "glass_characteristics": "clear plastic tumbler, medium height, cylindrical, transparent, no markings",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_143014_527461": {
+            "timestamp": "20250502_143014_527461",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143014_527461.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_143016_786676": {
+            "timestamp": "20250502_143016_786676",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1003\\temp_analysis_files\\1003_camera_frames\\frame_20250502_143016_786676.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        }
+    }
+}

@@ -1,0 +1,278 @@
+{
+    "frames": {
+        "20250502_000226_638342": {
+            "timestamp": "20250502_000226_640492",
+            "frame_path": "camera_frames/frame_20250502_000226_638342.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_000227_848045": {
+            "timestamp": "20250502_000227_850504",
+            "frame_path": "camera_frames/frame_20250502_000227_848045.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    352,
+                    324
+                ],
+                "right": [
+                    434,
+                    323
+                ],
+                "percentage": 75,
+                "glass_characteristics": "clear disposable plastic cup, cylindrical, medium size",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 75,
+            "left_point": [
+                352,
+                324
+            ],
+            "right_point": [
+                434,
+                323
+            ],
+            "glass_characteristics": "clear disposable plastic cup, cylindrical, medium size",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_000230_567542": {
+            "timestamp": "20250502_000230_569812",
+            "frame_path": "camera_frames/frame_20250502_000230_567542.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_000232_490453": {
+            "timestamp": "20250502_000232_492883",
+            "frame_path": "camera_frames/frame_20250502_000232_490453.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_000233_856629": {
+            "timestamp": "20250502_000233_859120",
+            "frame_path": "camera_frames/frame_20250502_000233_856629.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    435,
+                    255
+                ],
+                "right": [
+                    523,
+                    234
+                ],
+                "percentage": 60,
+                "glass_characteristics": "Clear disposable plastic cup, cylindrical, medium size, filled with water to above halfway.",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 60,
+            "left_point": [
+                435,
+                255
+            ],
+            "right_point": [
+                523,
+                234
+            ],
+            "glass_characteristics": "Clear disposable plastic cup, cylindrical, medium size, filled with water to above halfway.",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_000237_370920": {
+            "timestamp": "20250502_000237_373344",
+            "frame_path": "camera_frames/frame_20250502_000237_370920.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    392,
+                    292
+                ],
+                "right": [
+                    489,
+                    292
+                ],
+                "percentage": 70,
+                "glass_characteristics": "clear disposable plastic cup, cylindrical, medium size, transparent, contains clear liquid",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 70,
+            "left_point": [
+                392,
+                292
+            ],
+            "right_point": [
+                489,
+                292
+            ],
+            "glass_characteristics": "clear disposable plastic cup, cylindrical, medium size, transparent, contains clear liquid",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_000241_058095": {
+            "timestamp": "20250502_000241_060914",
+            "frame_path": "camera_frames/frame_20250502_000241_058095.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    404,
+                    324
+                ],
+                "right": [
+                    495,
+                    325
+                ],
+                "percentage": 60,
+                "glass_characteristics": "Clear plastic cup, cylindrical, medium size, transparent",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 60,
+            "left_point": [
+                404,
+                324
+            ],
+            "right_point": [
+                495,
+                325
+            ],
+            "glass_characteristics": "Clear plastic cup, cylindrical, medium size, transparent",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_000244_074780": {
+            "timestamp": "20250502_000244_077368",
+            "frame_path": "camera_frames/frame_20250502_000244_074780.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_000246_398056": {
+            "timestamp": "20250502_000246_400624",
+            "frame_path": "camera_frames/frame_20250502_000246_398056.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    433,
+                    367
+                ],
+                "right": [
+                    518,
+                    370
+                ],
+                "percentage": 25,
+                "glass_characteristics": "Small clear plastic cup, cylindrical, thin walls, partially filled with clear liquid (likely water).",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 25,
+            "left_point": [
+                433,
+                367
+            ],
+            "right_point": [
+                518,
+                370
+            ],
+            "glass_characteristics": "Small clear plastic cup, cylindrical, thin walls, partially filled with clear liquid (likely water).",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_000249_465702": {
+            "timestamp": "20250502_000249_468159",
+            "frame_path": "camera_frames/frame_20250502_000249_465702.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    453,
+                    404
+                ],
+                "right": [
+                    511,
+                    403
+                ],
+                "percentage": 35,
+                "glass_characteristics": "clear plastic cup, cylindrical, medium size, smooth walls",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                453,
+                404
+            ],
+            "right_point": [
+                511,
+                403
+            ],
+            "glass_characteristics": "clear plastic cup, cylindrical, medium size, smooth walls",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_000257_342614": {
+            "timestamp": "20250502_000257_345299",
+            "frame_path": "camera_frames/frame_20250502_000257_342614.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    451,
+                    345
+                ],
+                "right": [
+                    526,
+                    343
+                ],
+                "percentage": 35,
+                "glass_characteristics": "clear plastic disposable cup, cylindrical, medium height",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                451,
+                345
+            ],
+            "right_point": [
+                526,
+                343
+            ],
+            "glass_characteristics": "clear plastic disposable cup, cylindrical, medium height",
+            "appears_different": false,
+            "drinking_event": false
+        }
+    }
+}

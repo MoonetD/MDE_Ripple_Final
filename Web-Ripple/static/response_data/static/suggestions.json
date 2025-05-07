@@ -1,0 +1,13 @@
+{
+  "suggestions": [
+    {
+      "id_user": "static",
+      "icon": "\u26a0\ufe0f",
+      "title": "Hydration Reminder",
+      "description": "User static: Please ensure proper hydration throughout the day. Aim for at least 8 glasses of water.",
+      "priority": "medium",
+      "completed": false,
+      "caregiver-checkin": "today"
+    }
+  ]
+}

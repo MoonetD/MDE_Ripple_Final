@@ -1,0 +1,92 @@
+{
+    "frames": {
+        "20250502_150616_737034": {
+            "timestamp": "20250502_150616_737034",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150616_737034.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_150618_607832": {
+            "timestamp": "20250502_150618_607832",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150618_607832.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_150620_732482": {
+            "timestamp": "20250502_150620_732482",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150620_732482.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_150622_998716": {
+            "timestamp": "20250502_150622_998716",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150622_998716.jpg",
+            "result": {
+                "no_glass": false,
+                "glass_visible": true,
+                "left": [
+                    412,
+                    530
+                ],
+                "right": [
+                    521,
+                    544
+                ],
+                "percentage": 35,
+                "glass_characteristics": "Clear, disposable plastic cup; cylindrical, transparent; medium size; contains clear water",
+                "appears_different": false,
+                "drinking_event": false
+            },
+            "has_glass": true,
+            "glass_visible": true,
+            "water_percentage": 35,
+            "left_point": [
+                412,
+                530
+            ],
+            "right_point": [
+                521,
+                544
+            ],
+            "glass_characteristics": "Clear, disposable plastic cup; cylindrical, transparent; medium size; contains clear water",
+            "appears_different": false,
+            "drinking_event": false
+        },
+        "20250502_150625_183581": {
+            "timestamp": "20250502_150625_183581",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150625_183581.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_150627_411312": {
+            "timestamp": "20250502_150627_411312",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150627_411312.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_150629_290410": {
+            "timestamp": "20250502_150629_290410",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1105\\temp_analysis_files\\1105_camera_frames\\frame_20250502_150629_290410.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        }
+    }
+}

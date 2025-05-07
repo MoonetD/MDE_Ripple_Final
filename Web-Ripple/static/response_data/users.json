@@ -1,0 +1,41 @@
+{
+  "next_ripple_id": 1107,
+  "users": [
+    {
+      "name": "Suyash",
+      "ripple_id": 1103,
+      "image": "uploads/1103.jpg",
+      "last_update": "2025-05-02T14:35:32.398302",
+      "water_consumed": 244,
+      "rank_change": 0,
+      "rank": 1
+    },
+    {
+      "name": "Victor",
+      "ripple_id": 1106,
+      "image": "uploads/1106.jpg",
+      "last_update": "2025-05-02T15:15:27.143936",
+      "water_consumed": 58.5,
+      "rank_change": 0,
+      "rank": 2
+    },
+    {
+      "name": "Swapnil",
+      "ripple_id": 1104,
+      "image": "uploads/1104.jpg",
+      "last_update": "2025-05-02T14:54:06.890793",
+      "water_consumed": 9.0,
+      "rank_change": -1,
+      "rank": 3
+    },
+    {
+      "name": "Yuanyuan",
+      "ripple_id": 1105,
+      "image": "uploads/1105.jpg",
+      "last_update": "2025-05-02T15:05:38.552803",
+      "water_consumed": 5.0,
+      "rank_change": -1,
+      "rank": 4
+    }
+  ]
+}

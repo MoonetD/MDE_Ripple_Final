@@ -1,0 +1,13 @@
+{
+  "suggestions": [
+    {
+      "id_user": 1106,
+      "icon": "\ud83d\udea8",
+      "title": "Immediate Hydration Required: Offer Full Glass Now",
+      "description": "User 1106: At 3:44 PM, the elderly person has consumed less than 55ml (26.25% of a 200ml glass) along with only 6ml from food, totaling just 61ml of water today, which is dangerously low for a person aged 77+. RIGHT NOW, offer and encourage them to drink a full 200ml glass of water. If they have swallowing difficulties, provide water in small, frequent sips using a straw or cup with handles. Monitor them closely as they drink to ensure safe consumption.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 20 minutes"
+    }
+  ]
+}

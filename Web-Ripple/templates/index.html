@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block title %}Water Ripple - Leaderboard{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Leaderboard Column -->
+            <div class="col-8">
+                <div class="card shadow-sm">
+                    <div class="card-header">
+                        <h4>Leaderboard</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center" style="width: 60px;" data-sortable data-column="rank">Rank</th>
+                                        <th scope="col" class="text-center" style="width: 60px;" data-sortable data-column="rank_change">Δ</th>
+                                        <th scope="col" style="width: 100px;">User</th>
+                                        <th scope="col" data-sortable data-column="name">Name</th>
+                                        <th scope="col" data-sortable data-column="ripple_id">Resident ID</th>
+                                        <th scope="col" class="text-end" data-sortable data-column="water_consumed">Water Consumed</th>
+                                        <th scope="col" class="text-center">Explore</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for user in users %}
+                                    <tr>
+                                        <td class="text-center fw-bold">{{ user.rank }}</td>
+                                        <td class="text-center">
+                                            {% if user.rank_change > 0 %}
+                                                <span class="text-success">▲ {{ user.rank_change }}</span>
+                                            {% elif user.rank_change < 0 %}
+                                                <span class="text-danger">▼ {{ user.rank_change|replace('-', '') }}</span>
+                                            {% else %}
+                                                <span class="text-muted">―</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rounded-circle me-3" style="width: 60px; height: 60px; border: 2px solid #dee2e6; padding: 2px;">
+                                                    <img src="{{ user.image }}" alt="{{ user.name }}" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>{{ user.name }}</td>
+                                        <td class="text-center">{{ user.ripple_id }}</td>
+                                        <td class="text-end fw-bold">{{ user.water_consumed }} ml</td>
+                                        <td class="text-center">
+                                            <a href="{{ url_for('user_details', ripple_id=user.ripple_id) }}" class="btn btn-outline-primary btn-sm">Show More</a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- New User Form Column -->
+            <div class="col-4">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Create New User</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="createUserForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ripple_id" class="form-label">Resident ID</label>
+                                    <input type="text" class="form-control" id="ripple_id" value="{{ next_ripple_id }}" disabled readonly>
+                                </div>
+    
+                                <button type="submit" id="createUserBtn" class="btn btn-primary w-100">Create User</button>
+                            </form>
+                            <div id="recordingInProgress" class="mt-3 d-none">
+                                <div class="alert alert-info">
+                                    <strong>Recording in progress for: </strong>
+                                    <span id="recordingUserName"></span>
+                                </div>
+                                <button id="finishRecordingBtn" class="btn btn-success w-100">Finish Recording</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Action Items Card -->
+                <div class="card shadow-sm mt-4">
+                    <div class="card-header">
+                        <h4>Action Items</h4>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush">
+                            {% for suggestion in suggestions[:3] %}
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3 fs-4">{{ suggestion.icon }}</div>
+                                    <div>
+                                        <h6 class="mb-1">{{ suggestion.title }}</h6>
+                                        <p class="mb-1 small text-muted"><strong>User {{ suggestion.id_user }}</strong> {{ suggestion.description }}</p>
+                                        <div>
+                                            <span class="badge {% if suggestion.priority == 'high' %}bg-danger{% else %}bg-secondary{% endif %} me-2">
+                                                {{ suggestion.priority }}
+                                            </span>
+                                            <small class="text-muted">{{ suggestion.time }}</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% if not suggestions %}
+                            <div class="list-group-item text-muted text-center">
+                                No action items currently.
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    
+    <!-- Sorting Script -->
+    <script>
+
+        
+        // Function to handle new user creation response
+        function handleNewUserCreation(formElement) {
+            formElement.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('name');
+                const userName = nameInput.value.trim();
+                
+                if (!userName) {
+                    alert('Please enter a name');
+                    return;
+                }
+                
+                // Submit the form data
+                const response = await fetch('/create_user', {
+                    method: 'POST',
+                    body: new FormData(formElement)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show the recording in progress section
+                    const recordingSection = document.getElementById('recordingInProgress');
+                    const userNameSpan = document.getElementById('recordingUserName');
+                    
+                    recordingSection.classList.remove('d-none');
+                    userNameSpan.textContent = userName;
+                    
+                    // Keep the name value but disable the form
+                    nameInput.disabled = true;
+                    document.getElementById('createUserBtn').disabled = true;
+                } else {
+                    // Show error message
+                    alert('Error: ' + result.message);
+                }
+            });
+        }
+        
+        // Function to create a new row for the user
+        function createUserRow(user) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="text-center rank-cell">${user.rank}</td>
+                <td class="text-center change-cell">
+                    ${user.rank_change > 0 ? '<span class="text-success">↑</span>' :
+                     user.rank_change < 0 ? '<span class="text-danger">↓</span>' : '−'}
+                </td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle me-3" style="width: 60px; height: 60px; border: 2px solid black; padding: 2px;">
+                            <img src="${user.image}" alt="${user.name}" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </td>
+                <td>${user.name}</td>
+                <td class="text-center">${user.ripple_id}</td>
+                <td class="text-end fw-bold">${user.water_consumed} ml</td>
+                <td class="text-center">
+                    <button class="btn btn-outline-primary btn-sm">Show More</button>
+                </td>
+            `;
+            return row;
+        }
+        
+        // Add animation styles for rank changes
+        const style = document.createElement('style');
+        style.textContent = `
+            .rank-cell {
+                transition: all 0.3s ease-in-out;
+            }
+            .change-cell {
+                transition: all 0.3s ease-in-out;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Function to handle finish recording button
+        function handleFinishRecording() {
+            const finishBtn = document.getElementById('finishRecordingBtn');
+            
+            finishBtn.addEventListener('click', async () => {
+                finishBtn.disabled = true;
+                finishBtn.textContent = 'Finalizing...';
+                
+                try {
+                    const response = await fetch('/confirm_user_creation', {
+                        method: 'POST'
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        // Reset the form
+                        document.getElementById('name').disabled = false;
+                        document.getElementById('createUserBtn').disabled = false;
+                        document.getElementById('recordingInProgress').classList.add('d-none');
+                        
+                        // Reload the page to show the new user
+                        window.location.reload();
+                    } else {
+                        alert('Error: ' + result.message);
+                        finishBtn.disabled = false;
+                        finishBtn.textContent = 'Finish Recording';
+                    }
+                } catch (error) {
+                    alert('Error: ' + error.message);
+                    finishBtn.disabled = false;
+                    finishBtn.textContent = 'Finish Recording';
+                }
+            });
+        }
+        
+        // Initialize the form handler and finish recording button
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('#createUserForm');
+            if (form) {
+                handleNewUserCreation(form);
+            }
+            
+            handleFinishRecording();
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const table = document.querySelector('table');
+            const headers = table.querySelectorAll('th[data-sortable]');
+            
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const column = header.dataset.column;
+                    const currentOrder = header.dataset.order || 'desc';
+                    const newOrder = currentOrder === 'desc' ? 'asc' : 'desc';
+                    
+                    // Update URL with sort parameters
+                    const url = new URL(window.location);
+                    url.searchParams.set('sort', column);
+                    url.searchParams.set('order', newOrder);
+                    window.location = url;
+                });
+            });
+            
+            // Add sort indicators to current sort column
+            const currentSort = new URLSearchParams(window.location.search).get('sort');
+            const currentOrder = new URLSearchParams(window.location.search).get('order');
+            if (currentSort) {
+                const header = document.querySelector(`th[data-column="${currentSort}"]`);
+                if (header) {
+                    header.dataset.order = currentOrder;
+                    header.classList.add('sorted', `sorted-${currentOrder}`);
+                }
+            }
+        });
+    </script>
+    
+    <style>
+        
+
+        th[data-sortable] {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        th[data-sortable]:hover {
+            background-color: #f8f9fa;
+        }
+        
+        th[data-sortable]::after {
+            content: '⇅';
+            margin-left: 5px;
+            opacity: 0.3;
+        }
+        
+        th[data-sortable].sorted-asc::after {
+            content: '↑';
+            opacity: 1;
+        }
+        
+        th[data-sortable].sorted-desc::after {
+            content: '↓';
+            opacity: 1;
+        }
+    </style>
+{% endblock %}

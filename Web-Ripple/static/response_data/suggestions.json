@@ -1,0 +1,139 @@
+{
+  "suggestions": [
+    {
+      "id_user": 1002,
+      "icon": "\ud83d\udeb0",
+      "title": "Immediate Hydration Needed \u2014 Offer Full Glass of Water Now",
+      "description": "User 1002: At 10:33 AM, only about half a glass (\u2248100ml) of water and 3ml through food has been consumed. This is very low for someone aged 77+, who is at higher risk of dehydration. Right now, offer the person a full glass of water (200ml), encourage them to drink it fully, and observe for any difficulty while drinking. Use gentle prompts and supervise to ensure the entire glass is finished.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "in 20 minutes"
+    },
+    {
+      "id_user": 1003,
+      "icon": "\ud83d\udea8",
+      "title": "Encourage Immediate Water Intake",
+      "description": "User 1003: The individual has consumed less than half a glass of water (approx. 98ml) and minimal fluids from food since this morning, putting them at high risk of dehydration, especially given their age (77+). Give them a full glass of water (200ml) NOW, and supervise to ensure they finish it within the next 15 minutes. If they have trouble drinking, offer small sips every few minutes and consider providing a second glass in the next hour.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "15 minutes from now"
+    },
+    {
+      "id_user": 1003,
+      "icon": "\ud83d\udea8",
+      "title": "Immediate Hydration Needed: Offer a Full Glass Now",
+      "description": "User 1003: At 2:30 PM, the person has consumed less than half a glass of water and only 3ml through food, placing them at high risk of dehydration given their age (77+). RIGHT NOW, assist them in drinking a full glass of water (200ml). Stay with them to ensure the entire glass is finished, offering small, frequent sips if they have difficulty. This will improve their current hydration status before mid-afternoon.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udea8",
+      "title": "Urgent Hydration Needed: Offer a Full Glass Now",
+      "description": "User 1103: The person has consumed only about 30ml of water and 5ml from food by 2:39 PM, which is extremely low and raises dehydration risk considering their age (77+). IMMEDIATELY offer and encourage them to drink an entire glass of water (200ml) within the next 10 minutes. If they have swallowing difficulties, offer small sips or use a straw. Stay with them to ensure they drink the full amount. Repeat additional hydration reminders hourly for the rest of the afternoon.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "in 15 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udea8",
+      "title": "Urgent Hydration Needed Now",
+      "description": "User 1103: It is 2:47 PM and only about 35ml of water has been consumed today, putting this elderly person at high risk of dehydration. Immediately offer them a full glass of water (200ml), and encourage them to sip and finish it within the next 20 minutes. If they have difficulty drinking from a glass, use a straw or offer small sips every few minutes. Stay with them and monitor their intake to ensure they drink the full amount.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    },
+    {
+      "id_user": 1002,
+      "icon": "\ud83d\udca7",
+      "title": "Offer a full glass of water now",
+      "description": "User 1002: It's 2:48 PM, and the elderly person has only consumed about 120ml of water (60% of one glass) today, with no water intake from food. For their age (77+), this puts them at increased risk of dehydration. Please immediately provide them with a full glass of water (200ml) and directly encourage them to drink it slowly. Stay with them during intake to ensure safety and adequate hydration.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    },
+    {
+      "id_user": 1104,
+      "icon": "\ud83d\udea8",
+      "title": "Immediate Hydration Needed",
+      "description": "User 1104: The individual has had virtually no fluid intake today. RIGHT NOW, offer and encourage them to drink a full glass of water (200ml) immediately, preferably served at room temperature and handed directly to them to ensure it is consumed. Remain with them and offer reassurance while they drink, considering their age (77+) and elevated risk of dehydration.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "in 30 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udea8",
+      "title": "Urgent Hydration Needed: Offer Full Glass of Water Now",
+      "description": "User 1103: It is 2:59 PM and this elderly person (77+) has consumed only ~35ml of water from drinks (15% of a 200ml glass) and 5ml from food. This is significantly below safe minimums for this time of day. Immediately offer them a full glass (200ml) of water and encourage slow, supervised sipping until the glass is finished. Check their comfort, monitor for signs of dehydration (dry mouth, confusion, fatigue), and support them directly through the drinking process.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udea8",
+      "title": "Urgent Hydration Needed: Offer Full Glass Now",
+      "description": "User 1103: At 3:00 PM, the individual has only consumed about 30ml (15% of a 200ml glass) of water plus 5ml from food\u2014a dangerously low amount for this time of day in someone over 77 years old. Immediately offer a full 200ml glass of water and encourage them to drink it within 15 minutes. Monitor closely and offer sips if they cannot finish at once. Check for signs of dehydration (dry mouth, confusion).",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "15-20 minutes"
+    },
+    {
+      "id_user": 1106,
+      "icon": "\ud83d\udeb0",
+      "title": "Urgent Hydration Needed: Encourage Immediate Water Intake",
+      "description": "User 1106: As of 3:17 PM, the elderly person has consumed less than one-third of a standard glass of water (\u224853ml) and only 6ml from food. Given their age (77+), they are at high risk of dehydration. Right now, guide them to drink at least half a glass (\u2248100ml) of water, offering it in small, frequent sips to avoid overwhelm. Remain with them while they drink, and encourage another small water intake within the next hour.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udea8",
+      "title": "Urgent Hydration Needed: Offer Water Immediately",
+      "description": "User 1103: At 3:19 PM, the individual has only consumed approximately 30ml of water (15% of a 200ml glass) plus 5ml from food, which is critically low for their age and time of day. Right now, prepare a full 200ml glass of water and personally encourage them to drink at least half (100ml) over the next 15 minutes. Monitor closely for swallowing difficulties and gently prompt sips. This will help prevent dehydration and related health risks for seniors over 77.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "in 20 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udea8",
+      "title": "Offer a Full Glass of Water Immediately",
+      "description": "User 1103: It is 3:40 PM and the elderly person (77+) has consumed less than 40ml of water plus 5ml from food all day, which is critically low. Right now, please offer and encourage them to drink one entire 200ml glass of water slowly and monitor that they finish it. This immediate intake will help address their dehydration risk. Monitor for swallowing difficulties, and ensure the environment is calm to encourage drinking.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "in 20 minutes"
+    },
+    {
+      "id_user": 1103,
+      "icon": "\ud83d\udeb0",
+      "title": "Urgent: Offer a Full Glass of Water Now",
+      "description": "User 1103: It is 3:42 PM and the person has only consumed about 30ml of water (15% of a 200ml glass) and 5ml from food today. For someone over 77 years old, this intake is dangerously low and puts them at high risk of dehydration. Offer them a full glass of water (at least 200ml) right now. Sit with them and encourage slow, steady sips until most or all of the glass is finished. Monitor for any difficulty swallowing. Ensure additional fluids are offered every 1\u20132 hours for the rest of the day.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 15 minutes"
+    },
+    {
+      "id_user": 1106,
+      "icon": "\ud83d\udea8",
+      "title": "Immediate Hydration Required: Offer Full Glass Now",
+      "description": "User 1106: At 3:44 PM, the elderly person has consumed less than 55ml (26.25% of a 200ml glass) along with only 6ml from food, totaling just 61ml of water today, which is dangerously low for a person aged 77+. RIGHT NOW, offer and encourage them to drink a full 200ml glass of water. If they have swallowing difficulties, provide water in small, frequent sips using a straw or cup with handles. Monitor them closely as they drink to ensure safe consumption.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 20 minutes"
+    },
+    {
+      "id_user": "1103",
+      "icon": "\u26a0\ufe0f",
+      "title": "Hydration Reminder",
+      "description": "User 1103: Please ensure proper hydration throughout the day. Aim for at least 8 glasses of water.",
+      "priority": "medium",
+      "completed": false,
+      "caregiver-checkin": "today"
+    }
+  ]
+}

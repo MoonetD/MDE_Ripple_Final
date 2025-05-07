@@ -1,0 +1,13 @@
+{
+  "suggestions": [
+    {
+      "id_user": 1104,
+      "icon": "\ud83d\udea8",
+      "title": "Immediate Hydration Needed",
+      "description": "User 1104: The individual has had virtually no fluid intake today. RIGHT NOW, offer and encourage them to drink a full glass of water (200ml) immediately, preferably served at room temperature and handed directly to them to ensure it is consumed. Remain with them and offer reassurance while they drink, considering their age (77+) and elevated risk of dehydration.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "in 30 minutes"
+    }
+  ]
+}

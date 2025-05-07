@@ -1,0 +1,13 @@
+{
+  "suggestions": [
+    {
+      "id_user": 1003,
+      "icon": "\ud83d\udea8",
+      "title": "Immediate Hydration Needed: Offer a Full Glass Now",
+      "description": "User 1003: At 2:30 PM, the person has consumed less than half a glass of water and only 3ml through food, placing them at high risk of dehydration given their age (77+). RIGHT NOW, assist them in drinking a full glass of water (200ml). Stay with them to ensure the entire glass is finished, offering small, frequent sips if they have difficulty. This will improve their current hydration status before mid-afternoon.",
+      "priority": "high",
+      "completed": false,
+      "caregiver-checkin": "within 30 minutes"
+    }
+  ]
+}

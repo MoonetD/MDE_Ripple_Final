@@ -1,0 +1,31 @@
+{
+    "frames": {
+        "20250502_152935_239506": {
+            "timestamp": "20250502_152935_239506",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1107\\temp_analysis_files\\1107_camera_frames\\frame_20250502_152935_239506.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_152937_129768": {
+            "timestamp": "20250502_152937_129768",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1107\\temp_analysis_files\\1107_camera_frames\\frame_20250502_152937_129768.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        },
+        "20250502_152939_067677": {
+            "timestamp": "20250502_152939_067677",
+            "frame_path": "C:\\Users\\ydeng\\Desktop\\Water\\Web-Ripple\\static\\response_data\\1107\\temp_analysis_files\\1107_camera_frames\\frame_20250502_152939_067677.jpg",
+            "result": {
+                "no_glass": true
+            },
+            "has_glass": false,
+            "glass_visible": false
+        }
+    }
+}
